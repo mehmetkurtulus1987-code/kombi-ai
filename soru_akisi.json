@@ -1,0 +1,17 @@
+[
+  {
+    "tetik": "basınç",
+    "sorular": [
+      {
+        "soru": "Kombi kapandığında basınç düşüyor mu?",
+        "evet": {"A2": 5},
+        "hayir": {"A3": 2}
+      },
+      {
+        "soru": "Emniyet ventilinden su geliyor mu?",
+        "evet": {"A8": 4},
+        "hayir": {}
+      }
+    ]
+  }
+]
