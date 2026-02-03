@@ -12,7 +12,7 @@
     "cozum": "⚠️ Akış şalteri veya üç yollu vana arızalı olabilir. Kombi ekranında hata kodu (F1, L3 vb.) olup olmadığını kontrol edin."
   },
   "petek_isinmama": {
-    "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor", ],
+    "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
     "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
   }
 }
