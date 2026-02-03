@@ -1,79 +1,43 @@
 import os
 import json
-from telegram import Update, ReplyKeyboardMarkup
+from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-def soru_akisi_yukle():
-    with open("soru_akisi.json", "r", encoding="utf-8") as f:
+def ariza_verisi_yukle():
+    # Dosya adını ariza_tablosu.json olarak güncellediğini varsayıyorum
+    with open("ariza_tablosu.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    data = soru_akisi_yukle()
-    # Tüm ana kategorileri (basinc, sicak_su, ses_yapiyor vs.) listele
-    context.user_data["kategoriler"] = list(data.keys())
-    context.user_data["kategori_index"] = 0
-    
-    await soru_sor(update, context)
-
-async def soru_sor(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    data = soru_akisi_yukle()
-    kategoriler = context.user_data["kategoriler"]
-    idx = context.user_data["kategori_index"]
-
-    # Eğer tüm kategoriler bittiyse
-    if idx >= len(kategoriler):
-        await update.message.reply_text("Tüm teşhis adımları tamamlandı. Sorun tespit edilemediyse lütfen servisi arayın.")
-        context.user_data.clear()
-        return
-
-    mevcut_kat = kategoriler[idx]
-    ilk_soru = data[mevcut_kat]["ilk_soru"]
-    context.user_data["mevcut_kategori"] = mevcut_kat
-    context.user_data["mevcut_soru"] = ilk_soru
-
-    reply_keyboard = [["Evet", "Hayır"]]
     await update.message.reply_text(
-        f"Kategori: {mevcut_kat.upper()}\n\n{ilk_soru}",
-        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True, resize_keyboard=True)
+        "🛠️ Kombi Destek Botuna Hoş Geldiniz!\n\nLütfen yaşadığınız sorunu kısaca yazın (Örn: Basınç yükseliyor, sıcak su gelmiyor...)"
     )
 
-async def yanitla(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_answer = update.message.text
-    if user_answer not in ["Evet", "Hayır"]:
-        await update.message.reply_text("Lütfen butonları kullanın.")
-        return
+async def ariza_teshis(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_msg = update.message.text.lower()
+    data = ariza_verisi_yukle()
+    found = False
 
-    data = soru_akisi_yukle()
-    kat_adi = context.user_data.get("mevcut_kategori")
-    soru_adi = context.user_data.get("mevcut_soru")
+    for ariza, icerik in data.items():
+        # Kullanıcının yazdığı mesajda belirlediğimiz anahtar kelimelerden biri geçiyor mu?
+        if any(anahtar in user_msg for anahtar in icerik["anahtarlar"]):
+            await update.message.reply_text(icerik["cozum"])
+            found = True
+            break
     
-    adim = data[kat_adi]["sorular"].get(soru_adi, {}).get(user_answer)
-
-    if not adim:
-        await update.message.reply_text("Bir hata oluştu, baştan başlıyoruz.")
-        return
-
-    # EĞER BİR SONRAKİ SORU VARSA
-    if "sonraki_soru" in adim:
-        next_q = adim["sonraki_soru"]
-        context.user_data["mevcut_soru"] = next_q
+    if not found:
         await update.message.reply_text(
-            next_q,
-            reply_markup=ReplyKeyboardMarkup([["Evet", "Hayır"]], one_time_keyboard=True, resize_keyboard=True)
+            "Anlayamadım. Lütfen 'su akıtıyor', 'basınç düşüyor' gibi anahtar kelimeler içeren bir cümle kurun veya bir teknik servise danışın."
         )
-    
-    # EĞER "HAYIR" DEDİYSE VEYA "BİTİR" GELDİYSE BİR SONRAKİ KATEGORİYE GEÇ
-    elif adim.get("bitir") or user_answer == "Hayır":
-        await update.message.reply_text(f"{kat_adi} kontrolü tamamlandı, diğer ihtimale geçiliyor...")
-        context.user_data["kategori_index"] += 1
-        await soru_sor(update, context)
 
 def main():
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, yanitla))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, ariza_teshis))
+    
+    print("Bot serbest metin modunda çalışıyor...")
     app.run_polling()
 
 if __name__ == "__main__":
