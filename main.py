@@ -3,45 +3,44 @@ import json
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
+# Railway Variables kısmına 'BOT_TOKEN' adıyla eklediğin token'ı alır
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 def ariza_verisi_yukle():
-    # Dosya adını ariza_tablosu.json olarak güncellediğini varsayıyorum
+    # Yeni oluşturduğun tabloyu okur
     with open("ariza_tablosu.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🛠️ Kombi Destek Botuna Hoş Geldiniz!\n\nLütfen yaşadığınız sorunu kısaca yazın (Örn: Basınç yükseliyor, sıcak su gelmiyor...)"
+        "🛠️ Kombi Destek Botu Hazır!\n\nSorununuzu birkaç kelimeyle yazın. (Örn: Basınç yüksek, su akıyor, sıcak su yok)"
     )
 
-async def ariza_teshis(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def yanitla(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_msg = update.message.text.lower()
     data = ariza_verisi_yukle()
-    found_replies = []
+    found = False
 
     for ariza, icerik in data.items():
-        # Eğer kullanıcının mesajında anahtar kelimelerden HERHANGİ BİRİ geçiyorsa
-        for anahtar in icerik["anahtarlar"]:
-            if anahtar in user_msg:
-                found_replies.append(icerik["cozum"])
-                break # Bu kategoriden bir eşleşme bulduk, diğer anahtarlara bakmaya gerek yok
-
-    if found_replies:
-        # Birden fazla eşleşme varsa hepsini gönderir (Örn: hem su akıtıyor hem basınç diyorsa)
-        combined_reply = "\n\n".join(found_replies)
-        await update.message.reply_text(combined_reply)
-    else:
-        await update.message.reply_text(
-            "Anlayamadım. Lütfen 'su akıtıyor', 'basınç' gibi kelimeler kullanarak sorunu anlatın."
-        )
+        # Anahtar kelimelerden herhangi biri mesajda geçiyor mu?
+        if any(anahtar in user_msg for anahtar in icerik["anahtarlar"]):
+            await update.message.reply_text(f"🔍 Tespit: {ariza.replace('_', ' ').title()}\n\n💡 Çözüm: {icerik['cozum']}")
+            found = True
+            break
+    
+    if not found:
+        await update.message.reply_text("Bunu tam anlayamadım. Lütfen 'su sızıyor', 'bar artıyor' veya 'sıcak su' gibi net ifadeler kullanın.")
 
 def main():
+    if not BOT_TOKEN:
+        print("HATA: BOT_TOKEN bulunamadı!")
+        return
+
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, ariza_teshis))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, yanitla))
     
-    print("Bot serbest metin modunda çalışıyor...")
+    print("Bot yeni sistemle başlatıldı...")
     app.run_polling()
 
 if __name__ == "__main__":
