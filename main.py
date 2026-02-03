@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import json
 
 app = FastAPI()
+
+with open("ariza_tablosu.json", "r", encoding="utf-8") as f:
+    ARIZA_DB = json.load(f)
 
 class Soru(BaseModel):
     belirti: str
@@ -12,15 +16,20 @@ def root():
 
 @app.post("/teshis")
 def teshis(soru: Soru):
-    if "sıcak su" in soru.belirti.lower() and "petek" in soru.belirti.lower():
-        return {
-            "olasi_nedenler": [
-                "Üç yollu vana sıkışmış olabilir",
-                "Plakalı eşanjör kaçırıyor olabilir"
-            ],
-            "ilk_kontrol": "Üç yollu vana motoru ve hareketi kontrol edilmeli"
-        }
+    sonuc = []
 
-    return {
-        "mesaj": "Bu belirti için henüz veri yok"
-    }
+    for ariza in ARIZA_DB:
+        for b in ariza["belirtiler"]:
+            if b.lower() in soru.belirti.lower():
+                sonuc.append({
+                    "ariza": ariza["ariza"],
+                    "olasi_sebepler": ariza["olasi_sebepler"],
+                    "ilk_kontrol": ariza["ilk_kontrol"],
+                    "puan": ariza["puan"]
+                })
+
+    if not sonuc:
+        return {"mesaj": "Bu belirti için kayıtlı arıza yok"}
+
+    sonuc = sorted(sonuc, key=lambda x: x["puan"], reverse=True)
+    return sonuc
