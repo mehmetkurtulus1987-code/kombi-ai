@@ -14,5 +14,9 @@
   "petek_isinmama": {
     "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
     "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
+  },
+  "dusuk_su_basinci":{
+    "anahtarlar": ["E04 hatası", "1 bar altında", "su basıncı düşük ","düşük su basıncı "],
+    "cozum": " ⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1.5 ve 2.0 bar arasına getiriniz."
   }
 }
