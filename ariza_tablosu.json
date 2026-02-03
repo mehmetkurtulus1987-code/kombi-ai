@@ -1,6 +1,6 @@
 {
   "basinc_yukselmesi": {
-    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "su basinci"],
+    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "su basıncı"],
     "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
   },
   "su_akitma": {
@@ -10,5 +10,10 @@
   "sicak_su_yok": {
     "anahtarlar": ["sıcak su yok", "su ısınmıyor", "musluk soğuk"],
     "cozum": "⚠️ Akış şalteri veya üç yollu vana arızalı olabilir. Kombi ekranında hata kodu (F1, L3 vb.) olup olmadığını kontrol edin."
+  },
+  "petek_isinmama": {
+    "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor", ],
+    "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
+  },
   }
 }
