@@ -1,53 +1,14 @@
-[
-  {
-    "id": "A1",
-    "ariza": "Sıcak su açıldığında petekler ısınıyor",
-    "belirtiler": [
-      "sıcak su açıkken petekler ısınıyor",
-      "duş sırasında radyatörler sıcak"
-    ],
-    "olasi_sebepler": [
-      "Üç yollu vana sıkışmış",
-      "Üç yollu vana motoru arızalı"
-    ],
-    "ilk_kontrol": [
-      "Üç yollu vana motoru sökülerek hareketi kontrol edilir",
-      "Manuel konum değiştirme denenir"
-    ],
-    "puan": 10
+{
+  "basinc_yukselmesi": {
+    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "su basinci"],
+    "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
   },
-  {
-    "id": "A2",
-    "ariza": "Basınç çalışırken yükseliyor durunca düşüyor",
-    "belirtiler": [
-      "kombi çalışırken basınç yükseliyor",
-      "kombi durunca basınç düşüyor"
-    ],
-    "olasi_sebepler": [
-      "Genleşme tankı havası bitmiş",
-      "Genleşme tankı diyaframı yırtık"
-    ],
-    "ilk_kontrol": [
-      "Genleşme tankı sibobundan hava kontrol edilir",
-      "0.8-1 bar hava basılır"
-    ],
-    "puan": 9
+  "su_akitma": {
+    "anahtarlar": ["su akıtıyor", "su sızdırıyor", "alttan su geliyor"],
+    "cozum": "⚠️ Emniyet ventili arızalı olabilir veya basınç 3 barı geçtiği için tahliye yapıyordur. Basıncı kontrol edin."
   },
-  {
-    "id": "A3",
-    "ariza": "Sıcak su dalgalı geliyor",
-    "belirtiler": [
-      "sıcak su bir sıcak bir soğuk",
-      "duşta sıcaklık sabit değil"
-    ],
-    "olasi_sebepler": [
-      "Plakalı eşanjör kireçli",
-      "Debi türbini takılıyor"
-    ],
-    "ilk_kontrol": [
-      "Plakalı eşanjör kontrol edilir",
-      "Debi sensörü temizlenir"
-    ],
-    "puan": 8
+  "sicak_su_yok": {
+    "anahtarlar": ["sıcak su yok", "su ısınmıyor", "musluk soğuk"],
+    "cozum": "⚠️ Akış şalteri veya üç yollu vana arızalı olabilir. Kombi ekranında hata kodu (F1, L3 vb.) olup olmadığını kontrol edin."
   }
-]
+}
