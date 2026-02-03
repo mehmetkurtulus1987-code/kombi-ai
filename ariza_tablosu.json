@@ -1,6 +1,6 @@
 {
   "basinc_yukselmesi": {
-    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "su basıncı"],
+    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "su basıncı", "basınç", "bar", "gösterge", "ibre"],
     "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
   },
   "su_akitma": {
