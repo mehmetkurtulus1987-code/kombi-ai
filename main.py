@@ -18,18 +18,22 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def ariza_teshis(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_msg = update.message.text.lower()
     data = ariza_verisi_yukle()
-    found = False
+    found_replies = []
 
     for ariza, icerik in data.items():
-        # Kullanıcının yazdığı mesajda belirlediğimiz anahtar kelimelerden biri geçiyor mu?
-        if any(anahtar in user_msg for anahtar in icerik["anahtarlar"]):
-            await update.message.reply_text(icerik["cozum"])
-            found = True
-            break
-    
-    if not found:
+        # Eğer kullanıcının mesajında anahtar kelimelerden HERHANGİ BİRİ geçiyorsa
+        for anahtar in icerik["anahtarlar"]:
+            if anahtar in user_msg:
+                found_replies.append(icerik["cozum"])
+                break # Bu kategoriden bir eşleşme bulduk, diğer anahtarlara bakmaya gerek yok
+
+    if found_replies:
+        # Birden fazla eşleşme varsa hepsini gönderir (Örn: hem su akıtıyor hem basınç diyorsa)
+        combined_reply = "\n\n".join(found_replies)
+        await update.message.reply_text(combined_reply)
+    else:
         await update.message.reply_text(
-            "Anlayamadım. Lütfen 'su akıtıyor', 'basınç düşüyor' gibi anahtar kelimeler içeren bir cümle kurun veya bir teknik servise danışın."
+            "Anlayamadım. Lütfen 'su akıtıyor', 'basınç' gibi kelimeler kullanarak sorunu anlatın."
         )
 
 def main():
