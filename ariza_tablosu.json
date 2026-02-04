@@ -58,7 +58,32 @@
       "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
     }
   },
-  "Daikin": {},
+  "Daikin": {
+  "atesleme_10_64": {
+    "anahtarlar": ["10-64", "ateşleme", "yanmıyor"],
+    "teshis": "Ateşleme Hatası (10-64)",
+    "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi resetleyin. Sorun devam ederse gaz valfi veya iyonizasyon arızası olabilir."
+  },
+  "dusuk_basinc_E1_64": {
+    "anahtarlar": ["e1-64", "basınç düşük", "su basıncı", "bar"],
+    "teshis": "Düşük Su Basıncı (E1-64)",
+    "cozum": "⚠️ Kombi su basıncı yetersiz. Cihazın altındaki doldurma musluğunu açarak basıncı 1.5 bar seviyesine getirin."
+  },
+  "yuksek_basinc_E1_69": {
+    "anahtarlar": ["e1-69", "basınç yüksek", "su yükseliyor"],
+    "teshis": "Yüksek Su Basıncı (E1-69)",
+    "cozum": "⚠️ Su basıncı çok yüksek. En yakın radyatörün havasını alma kısmından su boşaltarak basıncı düşürün."
+  },
+  "asiri_isinma_80_01": {
+    "anahtarlar": ["80-01", "aşırı ısınma", "hararet"],
+    "teshis": "Aşırı Isınma Hatası (80-01)",
+    "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Cihazı resetleyip bir süre bekleyin. Sorun pompadan kaynaklı olabilir."
+  },
+  "fan_h5_04": {
+    "anahtarlar": ["h5-04", "fan", "baca"],
+    "teshis": "Fan / Hava Akış Sorunu (H5-04)",
+    "cozum": "⚠️ Fan motoru veya prosestat hatası. Bacada bir engel olup olmadığını kontrol edin."
+  },
   "Vaillant": {},
   "Baymak": {}
 }
