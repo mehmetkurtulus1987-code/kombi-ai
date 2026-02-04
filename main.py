@@ -87,7 +87,7 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"📍Not: {not_bilgisi}"
         )
         encoded_mesaj = urllib.parse.quote(ws_mesaj)
-        whatsapp_url = f"https://wa.me/905060357883?text={encoded_mesaj}"
+        whatsapp_url = f"https://wa.me/905376183344?text={encoded_mesaj}"
         
         kb = [[InlineKeyboardButton("WhatsApp ile Onayla ✅", url=whatsapp_url)]]
         await update.message.reply_text(
