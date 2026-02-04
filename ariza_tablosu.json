@@ -22,27 +22,27 @@
     }
   },
   "Dizayn_Doru": {
-    "atesleme_sorunu": {
+    "atesleme_sorunu_E01": {
       "anahtarlar": ["doru e01", "e01", "ateşleme"],
       "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
     },
-    "isinma_emniyeti": {
+    "isinma_emniyeti_E02": {
       "anahtarlar": ["doru e02", "e02", "ısınma"],
       "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Kombi soğuduktan sonra resetleyin. Pompa sıkışmış olabilir."
     },
-    "hava_akis_sorunu": {
+    "hava_akis_sorunu_E03": {
       "anahtarlar": ["doru e03", "e03", "baca", "fan"],
       "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."
     },
-    "doru_dusuk_basınc": {
+    "doru_dusuk_basınc_E04": {
       "anahtarlar": ["doru e04", "e04", "basınç düşük"],
       "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."
     },
-    "kalorifer_sensoru": {
+    "kalorifer_sensoru_E05": {
       "anahtarlar": ["doru e05", "e05", "ntc"],
       "cozum": "⚠️ Kalorifer gidiş hattı sensörü (NTC) arızalı veya kabloları yerinden çıkmış olabilir. Teknik servis gerekir."
     },
-    "sicak_su_sensoru": {
+    "sicak_su_sensoru_E06": {
       "anahtarlar": ["doru e06", "e06", "sıcak su sensör"],
       "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
     }
