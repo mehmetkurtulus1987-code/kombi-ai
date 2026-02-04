@@ -8,7 +8,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 def veri_yukle():
     # GitHub'daki JSON dosyanın adıyla aynı olmalı
-    with open("arizalar.json", "r", encoding="utf-8") as f:
+    with open("ariza_tablosu.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 # Türkçe karakter uyumlu küçük harf dönüştürücü
