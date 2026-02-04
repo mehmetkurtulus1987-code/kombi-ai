@@ -20,27 +20,27 @@
     "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1 buçuk 2 bar arasına getiriniz."
   },
   "atesleme_sorunu": {
-    "anahtarlar": [" Doru E01"],
+    "anahtarlar": ["Doru E01"],
     "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
   },
   "isinma_emniyeti": {
-    "anahtarlar": [" Doru E02"],
+    "anahtarlar": ["Doru E02"],
     "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Kombi soğuduktan sonra resetleyin. Pompa sıkışmış olabilir."
   },
   "hava_akis_sorunu": {
-    "anahtarlar": [" Doru E03"],
+    "anahtarlar": ["Doru E03"],
     "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."
   },
   "doru_dusuk_basınc": {
-    "anahtarlar": [" Doru E04"],
+    "anahtarlar": ["Doru E04"],
     "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."
   },
   "kalorifer_sensoru": {
-    "anahtarlar": [" Doru E05"],
+    "anahtarlar": ["Doru E05"],
     "cozum": "⚠️ Kalorifer gidiş hattı sensörü (NTC) arızalı veya kabloları yerinden çıkmış olabilir. Teknik servis gerekir."
   },
   "sicak_su_sensoru": {
-    "anahtarlar": [" Doru E06"],
+    "anahtarlar": ["Doru E06"],
     "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
   }
 }
