@@ -4,7 +4,7 @@ from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = "8506165438"  # BURAYA @userinfobot'tan aldığın ID'yi yaz!
+ADMIN_ID = "1079504201"  # BURAYA @userinfobot'tan aldığın ID'yi yaz!
 
 def veri_yukle():
     with open("ariza_tablosu.json", "r", encoding="utf-8") as f:
