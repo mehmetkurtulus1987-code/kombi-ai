@@ -15,7 +15,7 @@
     "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
     "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
   },
-  "dusuk_su_basinci": {
+  "dusuk_basinc": {
     "anahtarlar": ["Epsilon E04" ],
     "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1 buçuk 2 bar arasına getiriniz."
   }
