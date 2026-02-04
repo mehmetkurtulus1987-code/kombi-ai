@@ -119,7 +119,7 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 response = (
                     f"🔍 **{marka} - {teshis}**\n\n"
                     f"💡 **Çözüm:** {icerik['cozum']}\n\n"
-                    f"🛠️ Sorun çözülmediyse yukarıdaki butondan randevu alabilirsiniz."
+                    f"🛠️ Sorun çözülmediyse aşağıdaki butondan randevu alabilirsiniz."
                 )
                 await update.message.reply_text(response, reply_markup=rm, parse_mode="Markdown")
                 
