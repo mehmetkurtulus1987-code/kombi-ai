@@ -84,7 +84,16 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     if not BOT_TOKEN:
-        print("HATA: BOT_TOKEN eksik!")
+        print("Kritik Hata: BOT_TOKEN Railway üzerinde tanımlanmamış!")
         return
 
-    app = Application.builder
+    print("Bot başlatılıyor... Lütfen bekleyin.") # Bu satırı ekledik
+    
+    app = Application.builder().token(BOT_TOKEN).build()
+    
+    # Komutları ekle
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, mesaj_isleyici))
+    
+    print("Bot şu an aktif ve mesaj bekliyor.") # Bu satırı ekledik
+    app.run_polling()
