@@ -88,6 +88,11 @@
     "anahtarlar": ["h5-04", "fan", "baca"],
     "teshis": "Fan / Hava Akış Sorunu (H5-04)",
     "cozum": "⚠️ Fan motoru veya prosestat hatası. Bacada bir engel olup olmadığını kontrol edin."
+  },
+  "gaz_falfi_H4-03": {
+    "anahtarlar": ["H4-03", "gaz", ],
+    "teshis": "Gaz Valfi Sorunu (H4-03)",
+    "cozum": "⚠️ Gaz beslemesinde veya valfte teknik bir hata var. Servis çağırmalısınız."
   }
   },
   "Vaillant": {},
