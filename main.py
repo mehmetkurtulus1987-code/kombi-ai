@@ -79,11 +79,11 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # 2. WhatsApp Mesajı Oluşturma
         ws_mesaj = (
-            f"📌Randevu Talebi!!!\n📌"
+            f"📌Randevu Talebi!!!\n"
             f"👤Müşteri: {ad}\n"
             f"📲Telefon: {tel}\n"
             f"📝Cihaz: {marka}\n"
-            f"🛠️Arıza: {bulunan_teshis}\n🧰"
+            f"🛠️Arıza: {bulunan_teshis}\n"
             f"📍Not: {not_bilgisi}"
         )
         encoded_mesaj = urllib.parse.quote(ws_mesaj)
