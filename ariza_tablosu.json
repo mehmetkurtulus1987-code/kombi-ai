@@ -95,6 +95,48 @@
       "cozum": "⚠️ Gaz beslemesinde veya valfte teknik bir hata var. Servis çağırmalısınız."
     }
   },
-  "Vaillant": {},
-  "Baymak": {}
+  "Baymak": {
+    "atesleme_e01": {
+      "anahtarlar": ["e01", "ateşleme", "yanmıyor"],
+      "teshis": "Ateşleme Arızası (E01)",
+      "cozum": "⚠️ Gaz vanalarınızın açık olduğundan emin olun. Kombiyi resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
+    },
+    "hava_akis_e03": {
+      "anahtarlar": ["e03", "baca", "fan", "prosestat"],
+      "teshis": "Hava Akış / Baca Sorunu (E03)",
+      "cozum": "⚠️ Atık gaz tahliyesinde sorun var. Bacada engel olabilir veya fan motoru arızalıdır."
+    },
+    "dusuk_basinc_e10": {
+      "anahtarlar": ["e10", "basınç", "su bas", "bar"],
+      "teshis": "Düşük Su Basıncı (E10)",
+      "cozum": "⚠️ Su basıncı 1 barın altına düşmüş. Kombi altındaki siyah veya mavi doldurma musluğuyla 1.5 bara tamamlayın."
+    },
+    "pompa_e25": {
+      "anahtarlar": ["e25", "e26", "pompa", "devirdaim"],
+      "teshis": "Aşırı Isınma / Pompa Blokajı (E25)",
+      "cozum": "⚠️ Kombi içindeki su sirküle edilemiyor. Petek vanalarının açık olduğundan emin olun."
+    }
+  },
+  "Vaillant": {
+    "atesleme_f28": {
+      "anahtarlar": ["f28", "f29", "ateşleme", "alev"],
+      "teshis": "Ateşleme Hatası (F28/F29)",
+      "cozum": "⚠️ Cihaza gaz gelmiyor. Gaz vanasını kontrol edin. Alev üzerine X işareti olan tuşla (Reset) cihazı sıfırlayın."
+    },
+    "su_yok_f22": {
+      "anahtarlar": ["f22", "su bitti", "basınç düşük", "f.22"],
+      "teshis": "Kuru Yanma / Su Yetersiz (F22)",
+      "cozum": "⚠️ Kombide su yok. 1.5 bar olana kadar su doldurun. Eğer basınç hızlı düşüyorsa tesisatta kaçak olabilir."
+    },
+    "pompa_sensor_f75": {
+      "anahtarlar": ["f75", "pompa", "sensör", "f.75"],
+      "teshis": "Pompa Arızası / Basınç Hatası (F75)",
+      "cozum": "⚠️ Cihaz pompanın çalıştığını algılayamıyor. Resetlemeyi deneyin, düzelmezse sensör değişimi gerekebilir."
+    },
+    "asinma_f20": {
+      "anahtarlar": ["f20", "f.20", "aşırı ısınma", "limit"],
+      "teshis": "Aşırı Isınma Emniyeti (F20)",
+      "cozum": "⚠️ Eşanjör veya tesisat aşırı ısınmış. Cihazı kapatıp soğumasını bekledikten sonra resetleyin."
+    }
+  }
 }
