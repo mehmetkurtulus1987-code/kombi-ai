@@ -1,48 +1,50 @@
 {
   "Maktek_Epsilon": {
-  "basinc_yukselmesi": {
-    "anahtarlar": ["basınç yükseliyor", "bar artıyor", "bar", "gösterge", "ibre"],
-    "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
-  },
-  "su_akitma": {
-    "anahtarlar": ["su akıtıyor", "su sızdırıyor", "alttan su geliyor"],
-    "cozum": "⚠️ Emniyet ventili arızalı olabilir veya basınç 3 barı geçtiği için tahliye yapıyordur. Basıncı kontrol edin."
-  },
-  "sicak_su_yok": {
-    "anahtarlar": ["sıcak su yok", "su ısınmıyor", "musluk soğuk"],
-    "cozum": "⚠️ Akış şalteri veya üç yollu vana arızalı olabilir. Kombi ekranında hata kodu (F1, L3 vb.) olup olmadığını kontrol edin."
-  },
-  "petek_isinmama": {
-    "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
-    "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
-  },
-   "dusuk_basinc": {
-    "anahtarlar": ["Epsilon E04" ],
-    "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1 buçuk 2 bar arasına getiriniz."}
+    "basinc_yukselmesi": {
+      "anahtarlar": ["basınç yükseliyor", "bar artıyor", "bar", "gösterge", "ibre"],
+      "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
+    },
+    "su_akitma": {
+      "anahtarlar": ["su akıtıyor", "su sızdırıyor", "alttan su geliyor"],
+      "cozum": "⚠️ Emniyet ventili arızalı olabilir veya basınç 3 barı geçtiği için tahliye yapıyordur. Basıncı kontrol edin."
+    },
+    "sicak_su_yok": {
+      "anahtarlar": ["sıcak su yok", "su ısınmıyor", "musluk soğuk"],
+      "cozum": "⚠️ Akış şalteri veya üç yollu vana arızalı olabilir. Kombi ekranında hata kodu (F1, L3 vb.) olup olmadığını kontrol edin."
+    },
+    "petek_isinmama": {
+      "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor"],
+      "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir."
+    },
+    "dusuk_basinc": {
+      "anahtarlar": ["epsilon e04", "e04", "su bas"],
+      "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1.5 - 2 bar arasına getiriniz."
+    }
   },
   "Dizayn_Doru": {
-  "atesleme_sorunu": {
-    "anahtarlar": ["Doru E01"],
-    "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."}
-  },
-  "isinma_emniyeti": {
-    "anahtarlar": ["Doru E02"],
-    "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Kombi soğuduktan sonra resetleyin. Pompa sıkışmış olabilir."}
-  },
-  "hava_akis_sorunu": {
-    "anahtarlar": ["Doru E03"],
-    "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."}
-  },
-  "doru_dusuk_basınc": {
-    "anahtarlar": ["Doru E04"],
-    "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."}
-  },
-  "kalorifer_sensoru": {
-    "anahtarlar": ["Doru E05"],
-    "cozum": "⚠️ Kalorifer gidiş hattı sensörü (NTC) arızalı veya kabloları yerinden çıkmış olabilir. Teknik servis gerekir."}
-  },
-  "sicak_su_sensoru": {
-    "anahtarlar": ["Doru E06"],
-    "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."}
+    "atesleme_sorunu": {
+      "anahtarlar": ["doru e01", "e01", "ateşleme"],
+      "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
+    },
+    "isinma_emniyeti": {
+      "anahtarlar": ["doru e02", "e02", "ısınma"],
+      "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Kombi soğuduktan sonra resetleyin. Pompa sıkışmış olabilir."
+    },
+    "hava_akis_sorunu": {
+      "anahtarlar": ["doru e03", "e03", "baca", "fan"],
+      "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."
+    },
+    "doru_dusuk_basınc": {
+      "anahtarlar": ["doru e04", "e04", "basınç düşük"],
+      "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."
+    },
+    "kalorifer_sensoru": {
+      "anahtarlar": ["doru e05", "e05", "ntc"],
+      "cozum": "⚠️ Kalorifer gidiş hattı sensörü (NTC) arızalı veya kabloları yerinden çıkmış olabilir. Teknik servis gerekir."
+    },
+    "sicak_su_sensoru": {
+      "anahtarlar": ["doru e06", "e06", "sıcak su sensör"],
+      "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
+    }
   }
 }
