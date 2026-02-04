@@ -64,6 +64,11 @@
     "teshis": "Ateşleme Hatası (10-64)",
     "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi resetleyin. Sorun devam ederse gaz valfi veya iyonizasyon arızası olabilir."
   },
+  "atesleme_10_65": {
+    "anahtarlar": ["10-65", "ateşleme", "yanmıyor"],
+    "teshis": "Sahte Alev Algılama (10-65)",
+    "cozum": "⚠️ İyonizasyon çubuğunda sorun olabilir. Cihazı kapatıp açın."
+  },
   "dusuk_basinc_E1_64": {
     "anahtarlar": ["e1-64", "basınç düşük", "su basıncı", "bar"],
     "teshis": "Düşük Su Basıncı (E1-64)",
