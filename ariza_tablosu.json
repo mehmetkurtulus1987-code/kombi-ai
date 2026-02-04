@@ -1,5 +1,5 @@
 {
-  "Maktek_Epsilon": {
+  "Maktek Epsilon": {
     "basinc_yukselmesi": {
       "anahtarlar": ["basınç yükseliyor", "bar artıyor", "bar", "gösterge", "ibre"],
       "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
@@ -21,7 +21,7 @@
       "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1.5 - 2 bar arasına getiriniz."
     }
   },
-  "Dizayn_Doru": {
+  "Dizayn Doru": {
     "atesleme_sorunu_E01": {
       "anahtarlar": ["doru e01", "e01", "ateşleme"],
       "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
