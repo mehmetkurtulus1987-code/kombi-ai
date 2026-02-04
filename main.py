@@ -68,7 +68,17 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
     found = False
     for ariza_id, icerik in data[marka].items():
         if any(anahtar.lower() in user_msg for anahtar in icerik["anahtarlar"]):
-            await update.message.reply_text(f"🔍 **{marka} Teşhis:**\n\n{icerik['cozum']}")
+            # JSON'daki "teshis" alanını alıyoruz, yoksa eski sistemdeki gibi ariza_id'yi kullanıyoruz
+            teshis_basligi = icerik.get("teshis", ariza_id.replace("_", " ").title())
+            cozum_metni = icerik.get("cozum", "Çözüm bulunamadı.")
+
+            response = (
+                f"🔍 **{marka} - {teshis_basligi}**\n\n"
+                f"💡 **Çözüm:** {cozum_metni}\n\n"
+                f"🔄 _Başka bir işlem için /start yazabilirsiniz._"
+            )
+            
+            await update.message.reply_text(response, parse_mode="Markdown")
             found = True
             break
             
