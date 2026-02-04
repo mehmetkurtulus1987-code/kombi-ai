@@ -83,6 +83,7 @@
     "anahtarlar": ["h5-04", "fan", "baca"],
     "teshis": "Fan / Hava Akış Sorunu (H5-04)",
     "cozum": "⚠️ Fan motoru veya prosestat hatası. Bacada bir engel olup olmadığını kontrol edin."
+  }
   },
   "Vaillant": {},
   "Baymak": {}
