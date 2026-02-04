@@ -75,7 +75,7 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
             response = (
                 f"🔍 **{marka} - {teshis_basligi}**\n\n"
                 f"💡 **Çözüm:** {cozum_metni}\n\n"
-                f"🔄 _Başka bir işlem için /start yazabilirsiniz._"
+                f"🔄 _Başka bir marka seçimi için /start yazabilirsiniz._ /n/n Farklı hata kodu için yazmaya devam edebilirsiniz."
             )
             
             await update.message.reply_text(response, parse_mode="Markdown")
