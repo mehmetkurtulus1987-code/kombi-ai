@@ -1,4 +1,5 @@
 {
+  "Maktek_Epsilon": {
   "basinc_yukselmesi": {
     "anahtarlar": ["basınç yükseliyor", "bar artıyor", "bar", "gösterge", "ibre"],
     "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
@@ -15,8 +16,7 @@
     "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
     "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
   },
-  "Maktek_Epsilon": {
-  "dusuk_basinc": {
+   "dusuk_basinc": {
     "anahtarlar": ["Epsilon E04" ],
     "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1 buçuk 2 bar arasına getiriniz."}
   },
