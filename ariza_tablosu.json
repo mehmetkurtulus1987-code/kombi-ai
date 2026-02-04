@@ -2,6 +2,7 @@
   "Maktek Epsilon": {
     "basinc_yukselmesi": {
       "anahtarlar": ["basınç yükseliyor", "bar artıyor", "bar", "gösterge", "ibre"],
+      "teshis": "Basınç Yükselmesi Sorunu",
       "cozum": "⚠️ Kombi çalışırken basınç yükseliyorsa genleşme tankı havası bitmiş veya eşanjör delik olabilir. Servis çağırmadan önce doldurma musluğunun kapalı olduğundan emin olun."
     },
     "su_akitma": {
@@ -18,32 +19,39 @@
     },
     "dusuk_basinc": {
       "anahtarlar": ["epsilon e04", "e04", "su bas"],
+      "teshis": "Basınç Düşmesi Sorunu",
       "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1.5 - 2 bar arasına getiriniz."
     }
   },
   "Dizayn Doru": {
     "atesleme_sorunu_E01": {
       "anahtarlar": ["doru e01", "e01", "ateşleme"],
+      "teshis": "Ateşleme Sorunu",
       "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
     },
     "isinma_emniyeti_E02": {
       "anahtarlar": ["doru e02", "e02", "ısınma"],
+      "teshis": "Isı Emniyeti E02 Sorunu",
       "cozum": "⚠️ Tesisat vanalarının açık olduğunu kontrol edin. Kombi soğuduktan sonra resetleyin. Pompa sıkışmış olabilir."
     },
     "hava_akis_sorunu_E03": {
       "anahtarlar": ["doru e03", "e03", "baca", "fan"],
+      "teshis": "Hava Akış Sorunu E03",
       "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."
     },
     "dusuk_basınc_E04": {
       "anahtarlar": ["doru e04", "e04", "basınç düşük"],
+      "teshis": "Düşük Basınç Sorunu E04",
       "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."
     },
     "kalorifer_sensoru_E05": {
       "anahtarlar": ["doru e05", "e05", "ntc"],
+      "teshis": "Kalorifer Sensör Sorunu E05",
       "cozum": "⚠️ Kalorifer gidiş hattı sensörü (NTC) arızalı veya kabloları yerinden çıkmış olabilir. Teknik servis gerekir."
     },
     "sicak_su_sensoru_E06": {
       "anahtarlar": ["doru e06", "e06", "sıcak su sensör"],
+      "teshis": "Sıcak Su Sensör Sorunu E06",
       "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
     }
   }
