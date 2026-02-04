@@ -15,10 +15,12 @@
     "anahtarlar": ["petekler ısınmıyor", "sıcak suyu acınca petekler ısınıyor" ],
     "cozum": "⚠️ 3 yollu vana problemi ya da eşanjör tıkalı olabilir"
   },
+  "Maktek_Epsilon": {
   "dusuk_basinc": {
     "anahtarlar": ["Epsilon E04" ],
     "cozum": "⚠️ Kombinin altında bulunan su doldurma vanasını açıp su basıncını 1 buçuk 2 bar arasına getiriniz."
   },
+  "Dizayn_Doru": {
   "atesleme_sorunu": {
     "anahtarlar": ["Doru E01"],
     "cozum": "⚠️ Gaz vanasının açık olduğundan emin olun. Kombiyi 3 kez resetleyin. Sorun devam ederse iyonizasyon arızası olabilir."
