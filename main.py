@@ -24,7 +24,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Butonları tam olarak senin markalarınla oluşturuyoruz
     klavye = [
         ["Maktek Epsilon", "Maktek Rubby"],
-        ["Dizayn Doru", "Bosch Condense 2000W"]
+        ["Dizayn Doru", "Bosch Condense 2000W"],
+        ["Daikin", "Vaillant", "Baymak"],
     ]
     
     reply_markup = ReplyKeyboardMarkup(klavye, one_time_keyboard=True, resize_keyboard=True)
