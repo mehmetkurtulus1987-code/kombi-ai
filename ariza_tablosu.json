@@ -53,6 +53,11 @@
       "anahtarlar": ["doru e06", "e06", "sıcak su sensör"],
       "teshis": "Sıcak Su Sensör Sorunu E06",
       "cozum": "⚠️ Kullanım suyu sensörü arızalı. Sıcak su alamazsınız, sensör değişimi gerekebilir."
-    }
+    },
+  "Daikin": {
+  },
+    {,
+  "Vaillant": {
+  }
   }
 }
