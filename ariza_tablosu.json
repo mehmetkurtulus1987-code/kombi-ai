@@ -34,7 +34,7 @@
       "anahtarlar": ["doru e03", "e03", "baca", "fan"],
       "cozum": "⚠️ Atık gaz sisteminde (bacada) sorun olabilir. Fan veya prosestat kontrol edilmelidir. Bacayı kontrol edin."
     },
-    "doru_dusuk_basınc_E04": {
+    "dusuk_basınc_E04": {
       "anahtarlar": ["doru e04", "e04", "basınç düşük"],
       "cozum": "⚠️ Kombi su basıncı 1.0 barın altına düşmüş. Doldurma musluğunu kullanarak basıncı 1.5 bara getirin."
     },
