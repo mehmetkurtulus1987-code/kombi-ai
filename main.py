@@ -36,44 +36,44 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_text = update.message.text
+    user_text = update.message.text.strip() # Boşlukları temizle
     data = veri_yukle()
     
-    # 1. DURUM: Kullanıcı marka butonuna mı bastı? (JSON anahtarlarını kontrol et)
-    # Boşlukları alt tireye çevirmeden, doğrudan JSON anahtarlarıyla kıyaslıyoruz
-    marka_listesi = list(data.keys())
-    
-    # Kullanıcının bastığı buton JSON'da bir ana başlık mı?
-    # (JSON'daki başlıkların "Maktek Epsilon" şeklinde boşluklu olduğunu varsayıyoruz)
-    if user_text in marka_listesi:
-        context.user_data["secili_marka"] = user_text
+    # 1. DURUM: Marka Seçimi Kontrolü
+    # JSON'daki markaları ve kullanıcının yazdığını karşılaştırırken küçük harfe çevirip bakıyoruz
+    secilen_marka_anahtari = None
+    for marka_adi in data.keys():
+        if marka_adi.lower() == user_text.lower():
+            secilen_marka_anahtari = marka_adi
+            break
+
+    if secilen_marka_anahtari:
+        context.user_data["secili_marka"] = secilen_marka_anahtari
         await update.message.reply_text(
-            f"✅ **{user_text}** seçildi. Şimdi sorunuzu veya hata kodunu yazabilirsiniz.",
+            f"✅ **{secilen_marka_anahtari}** seçildi. Şimdi sorununuzu yazın.",
             reply_markup=ReplyKeyboardRemove(),
             parse_mode="Markdown"
         )
         return
 
-    # 2. DURUM: Marka seçiliyse arıza ara
+    # 2. DURUM: Arıza Arama
     marka = context.user_data.get("secili_marka")
     if not marka:
-        await update.message.reply_text("Lütfen önce bir marka seçin. Menü için /start yazabilirsiniz.")
+        # Eğer marka hafızada yoksa tekrar seçim yaptır
+        await update.message.reply_text("⚠️ Önce marka seçmelisiniz. /start yazarak menüyü açın.")
         return
 
-    # Arama işlemi
+    # Arıza tarama mantığı
     user_msg = user_text.lower()
     found = False
-    
     for ariza_id, icerik in data[marka].items():
-        for anahtar in icerik["anahtarlar"]:
-            if anahtar.lower() in user_msg:
-                await update.message.reply_text(f"🔍 **{marka} Teşhis:**\n\n{icerik['cozum']}\n\n_Sıfırlamak için /start yazın._", parse_mode="Markdown")
-                found = True
-                break
-        if found: break
-        
+        if any(anahtar.lower() in user_msg for anahtar in icerik["anahtarlar"]):
+            await update.message.reply_text(f"🔍 **{marka} Teşhis:**\n\n{icerik['cozum']}")
+            found = True
+            break
+            
     if not found:
-        await update.message.reply_text("Bunu anlayamadım. Lütfen farklı kelimelerle deneyin veya /start ile marka değiştirin.")
+        await update.message.reply_text("Bunu anlayamadım. Lütfen 'basınç', 'E01' gibi net kelimeler yazın.")
 
 def main():
     if not BOT_TOKEN: return
