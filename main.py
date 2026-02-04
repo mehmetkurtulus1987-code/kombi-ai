@@ -79,15 +79,15 @@ async def mesaj_isleyici(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # 2. WhatsApp Mesajı Oluşturma
         ws_mesaj = (
-            f"Randevu Talebi!!!\n"
-            f"Müşteri: {ad}\n"
-            f"Telefon: {tel}\n"
-            f"Cihaz: {marka}\n"
-            f"Arıza: {bulunan_teshis}\n"
-            f"Not: {not_bilgisi}"
+            f"📌Randevu Talebi!!!\n📌"
+            f"👤Müşteri: {ad}\n"
+            f"📲Telefon: {tel}\n"
+            f"📝Cihaz: {marka}\n"
+            f"🛠️Arıza: {bulunan_teshis}\n🧰"
+            f"📍Not: {not_bilgisi}"
         )
         encoded_mesaj = urllib.parse.quote(ws_mesaj)
-        whatsapp_url = f"https://wa.me/905376183344?text={encoded_mesaj}"
+        whatsapp_url = f"https://wa.me/905060357883?text={encoded_mesaj}"
         
         kb = [[InlineKeyboardButton("WhatsApp ile Onayla ✅", url=whatsapp_url)]]
         await update.message.reply_text(
